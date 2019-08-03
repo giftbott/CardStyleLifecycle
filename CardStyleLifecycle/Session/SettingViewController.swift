@@ -112,6 +112,7 @@ extension SettingViewController: UIAdaptivePresentationControllerDelegate {
     os_log(.default, log: .delegate, "DidAttemptToDismiss")
     
     // 4) 디스미스 제스처로 디스미스를 시도했다가 실패한 경우 후처리하기
+    confirmDismiss()
   }
   
   func presentationControllerWillDismiss(_ presentationController: UIPresentationController) {
