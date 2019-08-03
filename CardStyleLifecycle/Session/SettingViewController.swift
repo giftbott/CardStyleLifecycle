@@ -33,10 +33,10 @@ final class SettingViewController: UIViewController {
     overrideUserInterfaceStyle = userInterfaceStyle
 
     // 1) 디스미스 제스처를 통한 디스미스 비활성화
-    isModalInPresentation = true
+//    isModalInPresentation = true
     
     // 2) 디스미스 제스처 이벤트 제어
-
+    navigationController?.presentationController?.delegate = self
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -96,3 +96,29 @@ final class SettingViewController: UIViewController {
   }
 }
 
+
+// MARK: - UIAdaptivePresentationControllerDelegate
+
+extension SettingViewController: UIAdaptivePresentationControllerDelegate {
+  func presentationControllerShouldDismiss(_ presentationController: UIPresentationController) -> Bool {
+    os_log(.default, log: .delegate, "ShouldDismiss")
+    return true
+    
+    // 3) 데이터가 변경된 경우, 디스미스 제스처를 통한 디스미스 방지
+  }
+  
+  // isModalInPresentation이 true거나 ShouldDismiss가 false일 경우 호출됨
+  func presentationControllerDidAttemptToDismiss(_ presentationController: UIPresentationController) {
+    os_log(.default, log: .delegate, "DidAttemptToDismiss")
+    
+    // 4) 디스미스 제스처로 디스미스를 시도했다가 실패한 경우 후처리하기
+  }
+  
+  func presentationControllerWillDismiss(_ presentationController: UIPresentationController) {
+    os_log(.default, log: .delegate, "WillDismiss")
+  }
+  
+  func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+    os_log(.default, log: .delegate, "DidDismiss")
+  }
+}
