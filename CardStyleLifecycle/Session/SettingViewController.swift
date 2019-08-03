@@ -33,7 +33,7 @@ final class SettingViewController: UIViewController {
     overrideUserInterfaceStyle = userInterfaceStyle
 
     // 1) 디스미스 제스처를 통한 디스미스 비활성화
-    
+    isModalInPresentation = true
     
     // 2) 디스미스 제스처 이벤트 제어
 
