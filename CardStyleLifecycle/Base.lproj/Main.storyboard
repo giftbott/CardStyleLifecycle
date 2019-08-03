@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="CardStyleLifecycle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="FR7-nN-x4w">
+                                <rect key="frame" x="161" y="457" width="92" height="72"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYf-VY-4i0">
+                                        <rect key="frame" x="0.0" y="0.0" width="89" height="36"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <state key="normal" title="Automatic"/>
+                                        <connections>
+                                            <segue destination="tIA-tT-S2p" kind="presentation" identifier="Automatic" modalPresentationStyle="automatic" id="hmi-i1-Rbe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ou5-kM-AYn">
+                                        <rect key="frame" x="0.0" y="36" width="92" height="36"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <state key="normal" title="FullScreen"/>
+                                        <connections>
+                                            <segue destination="tIA-tT-S2p" kind="presentation" identifier="FullScreen" modalPresentationStyle="fullScreen" id="N9t-gr-fLJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modal Presentation Style" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5v-ZQ-CHc">
+                                <rect key="frame" x="68" y="385.5" width="278" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FR7-nN-x4w" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9Pa-5b-zIj"/>
+                            <constraint firstItem="FR7-nN-x4w" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="40" id="Hxh-QF-94q"/>
+                            <constraint firstItem="FR7-nN-x4w" firstAttribute="top" secondItem="T5v-ZQ-CHc" secondAttribute="bottom" constant="40" id="b8J-UV-dOt"/>
+                            <constraint firstItem="T5v-ZQ-CHc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ruf-Bx-bzn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="139"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="B5v-qU-AqQ">
+            <objects>
+                <viewController id="wgu-FW-EVe" customClass="SettingViewController" customModule="CardStyleLifecycle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VIN-zn-cQc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQh-I0-fcA">
+                                <rect key="frame" x="184" y="106" width="46" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="122" translatesAutoresizingMaskIntoConstraints="NO" id="Un3-aV-Gsu">
+                                <rect key="frame" x="33.5" y="416.5" width="347" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="isDarkModeEnabled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpD-Gb-Zjg">
+                                        <rect key="frame" x="0.0" y="0.0" width="176" height="31"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SgC-oS-9lS">
+                                        <rect key="frame" x="298" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JQh-I0-fcA" firstAttribute="top" secondItem="vsU-4A-Zdy" secondAttribute="top" constant="50" id="UOj-1s-kIz"/>
+                            <constraint firstItem="Un3-aV-Gsu" firstAttribute="centerX" secondItem="vsU-4A-Zdy" secondAttribute="centerX" id="ZAC-P1-lP4"/>
+                            <constraint firstItem="JQh-I0-fcA" firstAttribute="centerX" secondItem="vsU-4A-Zdy" secondAttribute="centerX" id="gTw-3p-D7C"/>
+                            <constraint firstItem="Un3-aV-Gsu" firstAttribute="centerY" secondItem="vsU-4A-Zdy" secondAttribute="centerY" id="wwR-AC-sPj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vsU-4A-Zdy"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Setting" id="P84-d3-2qo">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="pn0-39-iyq">
+                            <connections>
+                                <action selector="cancelChanges:" destination="wgu-FW-EVe" id="Bhp-az-2Mm"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="1CZ-uB-OaG">
+                            <connections>
+                                <action selector="saveChanges:" destination="wgu-FW-EVe" id="FKF-8O-G8z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="isDarkModeOn" destination="SgC-oS-9lS" id="Sjo-sL-IAh"/>
+                        <outlet property="stateLabel" destination="JQh-I0-fcA" id="GHX-AD-3GD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4H5-gR-4dg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1707" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IDa-s5-Pgl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tIA-tT-S2p" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MQW-4h-lbB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wgu-FW-EVe" kind="relationship" relationship="rootViewController" id="sYi-fO-xnJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ni4-by-pEf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="139"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hmi-i1-Rbe"/>
+    </inferredMetricsTieBreakers>
+</document>
