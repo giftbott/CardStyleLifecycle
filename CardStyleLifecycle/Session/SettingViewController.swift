@@ -102,9 +102,9 @@ final class SettingViewController: UIViewController {
 extension SettingViewController: UIAdaptivePresentationControllerDelegate {
   func presentationControllerShouldDismiss(_ presentationController: UIPresentationController) -> Bool {
     os_log(.default, log: .delegate, "ShouldDismiss")
-    return true
     
     // 3) 데이터가 변경된 경우, 디스미스 제스처를 통한 디스미스 방지
+    return isDarkMode == isDarkModeOn.isOn
   }
   
   // isModalInPresentation이 true거나 ShouldDismiss가 false일 경우 호출됨
